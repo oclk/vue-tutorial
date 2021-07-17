@@ -17,6 +17,7 @@
 -->
 
 <!-- Lesson #3 - Template Syntax [ 🤖 ] -->
+<!--
 <div id="app">
     Message: {{ message }}
     <div v-html="rowHtml"></div>
@@ -27,6 +28,17 @@
     {{ color == 'RED' ? 'Color is red' : 'Color is not red' }}
     <hr>
     {{ message.split(' ')[0] }}
+</div>
+-->
+
+<!-- Lesson #4 - Data Properties and Methods [ 👀 ] -->
+<div id="app">
+    Counter: {{ counter }}
+    <hr>
+    <button @click="inc">Inc</button>
+    <button @click="dec">Dec</button>
+    <hr>
+    Date: {{ getDate() }}
 </div>
 
 <script src="app.js"></script>

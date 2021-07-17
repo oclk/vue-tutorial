@@ -55,6 +55,7 @@ Vue.createApp({
 */
 
 // Lesson #3 - Template Syntax [ 🤖 ]
+/*
 // Interpolations (Text | Raw HTML | Attributes | JavaScript Expressions)
 const App = {
     data: () => ({
@@ -64,6 +65,27 @@ const App = {
         color: "RED",
         index: 1,
     })
+}
+
+Vue.createApp(App).mount('#app')
+*/
+
+// Lesson #4 - Data Properties and Methods [ 👀 ]
+const App = {
+    data: () => ({
+        counter: 0,
+    }),
+    methods: {
+        inc() {
+            this.counter++;
+        },
+        dec() {
+            this.counter--;
+        },
+        getDate() {
+            return new Date();
+        }
+    }
 }
 
 Vue.createApp(App).mount('#app')
