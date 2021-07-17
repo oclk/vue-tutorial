@@ -1,21 +1,32 @@
-<!-- Lesson #1 - Introduction [ 🚀 ] -->
-<!--
 <script src="https://unpkg.com/vue@next"></script>
 
+<!-- Lesson #1 - Introduction [ 🚀 ] -->
+<!--
 <div id="app">
     {{ message }}
 </div>
-
-<script src="app.js"></script>
 -->
 
 <!-- Lesson #2 - Application & Component Instances [ 🐣 ] -->
-<script src="https://unpkg.com/vue@next"></script>
-
+<!--
 <div id="app">
     Counter: {{ counter }}
     <hr>
     <button @click="counter++">Increment</button>
+</div>
+-->
+
+<!-- Lesson #3 - Template Syntax [ 🤖 ] -->
+<div id="app">
+    Message: {{ message }}
+    <div v-html="rowHtml"></div>
+    <div v-bind:[dynamicArg]="id"></div>
+    <hr>
+    {{ index + 1 }}
+    <hr>
+    {{ color == 'RED' ? 'Color is red' : 'Color is not red' }}
+    <hr>
+    {{ message.split(' ')[0] }}
 </div>
 
 <script src="app.js"></script>

@@ -10,7 +10,7 @@ const App = {
 
 Vue.createApp(App).mount('#app')
 */
-
+/*
 // Lesson #2 - Application & Component Instances [ 🐣 ]
 // Register 'globals'
 const app = Vue.createApp({
@@ -52,3 +52,18 @@ Vue.createApp({
         console.log('updated' + ' Counter: ' + this.counter)
     },
 }).mount('#app')
+*/
+
+// Lesson #3 - Template Syntax [ 🤖 ]
+// Interpolations (Text | Raw HTML | Attributes | JavaScript Expressions)
+const App = {
+    data: () => ({
+        message: 'Hello world!',
+        rowHtml: '<h1>Row HTML description</h1>',
+        id: "tempId",
+        color: "RED",
+        index: 1,
+    })
+}
+
+Vue.createApp(App).mount('#app')
