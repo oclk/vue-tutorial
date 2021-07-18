@@ -93,6 +93,7 @@ Vue.createApp(App).mount('#app')
 */
 
 // Lesson #5 - Computed Properties and Watchers [ 👁 ]
+/*
 const App = {
     data: () => ({
         fullname: "",
@@ -126,6 +127,31 @@ const App = {
             this.fullname = this.name + " " + newVal
         }
     }
+}
+
+Vue.createApp(App).mount('#app')
+*/
+
+// Lesson #6 - Computed Properties and Watchers [ 🎨 ]
+// Binding HTML Classes (Object Syntax | Array Syntax)
+// Binding Inline Styles (Object Syntax | Array Syntax | Multiple Values)
+const App = {
+    data: () => ({
+        isDanger: true,
+        isSuccess: false,
+        classSyntax: {
+            danger: true,
+            success: false
+        },
+        border: 'border',
+        danger: 'danger',
+        styleSyntax: {
+            color: 'yellow',
+            fontSize: 30 + 'px'
+        },
+        styleColor: 'color: green; fontSize: 24px',
+        styleBorder: 'border: 1px solid grey; border-radius: 10px' 
+    })
 }
 
 Vue.createApp(App).mount('#app')

@@ -1,4 +1,5 @@
 <script src="https://unpkg.com/vue@next"></script>
+<link rel="stylesheet" href="style.css">
 
 <!-- Lesson #1 - Introduction [ 🚀 ] -->
 <!--
@@ -44,6 +45,7 @@
 -->
 
 <!-- Lesson #5 - Computed Properties and Watchers [ 👁 ] -->
+<!--
 <div id="app">
     <input type="text" placeholder="name" v-model="name">
     <input type="text" placeholder="surname" v-model="surname">
@@ -56,6 +58,32 @@
     <button @click="counter2++">Change counter2</button>
     <hr>
     Counter: {{ getCounter() }} - Counter 2: {{ getCounter2 }}
+</div>
+-->
+
+<!-- Lesson #6 - Class and Style Bindings [ 🎨 ] -->
+<div id="app">
+    <div :class="{success: isSuccess, danger: isDanger}">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quidem inventore, quam, aut aspernatur dolor corporis autem deleniti neque aliquam, facilis expedita reprehenderit ratione cupiditate quisquam consectetur blanditiis eius! At?</p>
+    </div>
+    <div :class="classSyntax">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt animi saepe exercitationem atque quidem vero eveniet itaque pariatur! Perspiciatis rem eius nostrum obcaecati placeat alias. Maiores voluptas atque incidunt praesentium!</p>
+    </div>
+    <div :class="[border, danger]">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ad esse eveniet, numquam voluptatem unde recusandae rem, non cumque porro laudantium quam, molestias voluptatum molestiae? Aliquid ad doloremque eligendi suscipit!</p>
+    </div>
+    <div :class="[border, isDanger ? danger : '']">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ad esse eveniet, numquam voluptatem unde recusandae rem, non cumque porro laudantium quam, molestias voluptatum molestiae? Aliquid ad doloremque eligendi suscipit!</p>
+    </div>
+    <div :style="{color: 'blue', fontSize: 30 + 'px'}">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem amet eaque officiis, cupiditate doloremque, magni eligendi numquam quaerat illo ex, debitis eum eos accusantium sed. Saepe illum culpa nobis eos!</p>
+    </div>
+    <div :style="styleSyntax">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem amet eaque officiis, cupiditate doloremque, magni eligendi numquam quaerat illo ex, debitis eum eos accusantium sed. Saepe illum culpa nobis eos!</p>
+    </div>
+    <div :style="[styleColor, styleBorder]">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem amet eaque officiis, cupiditate doloremque, magni eligendi numquam quaerat illo ex, debitis eum eos accusantium sed. Saepe illum culpa nobis eos!</p>
+    </div>
 </div>
 
 <script src="app.js"></script>

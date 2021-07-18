@@ -1,0 +1,12 @@
+/* Lesson #6 - Class and Style Bindings [ 🎨 ] */
+.danger {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+.border {
+    border: 1px solid grey;
+}
