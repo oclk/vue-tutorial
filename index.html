@@ -89,11 +89,31 @@
 -->
 
 <!-- Lesson #7 - Conditional Rendering [ 🤷‍♂️ ] -->
+<!--
 <div id="app">
     <h1 v-if="type == 'FIRST'">From FIRST</h1>
     <h1 v-else-if="type == 'SECOND'">From SECOND</h1>
     <h1 v-else>From ELSE</h1>
     <h3 v-show="type == 'SECOND'">From SECOND (v-show)</h3>
+</div>
+-->
+
+<!-- Lesson #8 - List Rendering [ 👋🏻 ] -->
+<div id="app">
+    <div v-for="i in 10" :key="i">
+        {{ i }}
+    </div>
+    <hr>
+    <div v-for="i in evenNumbers" :key="i">
+        {{ i }}
+    </div>
+    <div>
+        <ul>
+            <li v-for="(user, i) in users" :key="i">
+                Name: {{ user.name }} - Surname: {{ user.surname }}
+            </li>
+        </ul>
+    </div>
 </div>
 
 <script src="app.js"></script>

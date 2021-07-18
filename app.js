@@ -159,6 +159,7 @@ Vue.createApp(App).mount('#app')
 */
 
 // Lesson #7 - Conditional Rendering [ 🤷‍♂️ ]
+/*
 // v-if (v-else | v-else-if)
 // v-show
 // v-if vs v-show
@@ -166,6 +167,29 @@ const App = {
     data: () => ({
         type: 'FIRST'
     })
+}
+
+Vue.createApp(App).mount('#app')
+*/
+
+// Lesson #8 - List Rendering [ 👋🏻 ]
+// v-for with a Range
+// Displaying Filtered/Sorted Results
+// v-for with an Object
+const App = {
+    data: () => ({
+        numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        users: [
+            { name: "Ahmet", surname: "Yılmaz", username: "a.yilmaz" },
+            { name: "Mehmet", surname: "Yıldız", username: "m..yildiz" },
+            { name: "Zeynep", surname: "Çelik", username: "z.celik" },
+        ]
+    }),
+    computed: {
+        evenNumbers() {
+            return this.numbers.filter(number => number % 2 === 0)
+        }
+    }
 }
 
 Vue.createApp(App).mount('#app')
