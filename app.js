@@ -197,6 +197,7 @@ Vue.createApp(App).mount('#app')
 */
 
 // Lesson #9 - Event Handling [ 🔥 ]
+/*
 // Multiple Event Handlers
 // Event Modifiers (.stop | .prevent | .capture | .once ...)
 // Key Modifiers (.enter | .tab | .esc ...)
@@ -219,6 +220,27 @@ const App = {
             console.log(e.target.value)
         }
     }
+}
+
+Vue.createApp(App).mount('#app')
+*/
+
+// Lesson #10 - Form Input Bindings [ ✍️ ]
+// v-model
+// Text
+// Multiline text
+// Checkbox
+// Radio
+// Select
+const App = {
+    data: () => ({
+        text: "Sample text",
+        textarea: "Sample textarea",
+        checkbox: false,
+        checkboxes: [],
+        radio: "",
+        select: ""
+    })
 }
 
 Vue.createApp(App).mount('#app')

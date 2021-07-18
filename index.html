@@ -119,6 +119,7 @@
 -->
 
 <!-- Lesson #9 - Event Handling [ 🔥 ] -->
+<!--
 <div id="app">
     <button @click="one(), two()">Multiple Event</button>
     <form action="">
@@ -126,6 +127,44 @@
     </form>
     <input type="text" @keyup.enter="enter" placeholder="Enter value">
     <input type="text" @keyup.ctrl.enter="ctrlEnter" placeholder="Enter value 2">
+</div>
+-->
+
+<!-- Lesson #10 - Form Input Bindings [ ✍️ ] -->
+<div id="app">
+    <form>
+        <input v-model="text" type="text" placeholder="type text">
+        {{ text }}
+        <hr>
+        <textarea v-model="textarea" rows="3"></textarea>
+        {{ textarea }}
+        <div>
+            <h3>Checkbox Operations</h3>
+            <input v-model="checkbox" type="checkbox">
+            {{ checkbox }}
+            <br>
+            <input v-model="checkboxes" type="checkbox" name="TUR" value="TUR">
+            <input v-model="checkboxes" type="checkbox" name="USA" value="USA">
+            <input v-model="checkboxes" type="checkbox" name="GER" value="GER">
+            {{ checkboxes }}
+        </div>
+        <div>
+            <h3>Radio button Operations</h3>
+            <input v-model="radio" type="radio" value="MALE">
+            <input v-model="radio" type="radio" value="FEMALE">
+            {{ radio }}
+        </div>
+        <div>
+            <h3>Select Operations</h3>
+            <select v-model="select">
+                <option value="tr">TUR</option>
+                <option value="usa">USA</option>
+                <option value="ger">GER</option>
+                <option value="fr">FR</option>
+            </select>
+            {{ select }}
+        </div>
+    </form>
 </div>
 
 <script src="app.js"></script>
