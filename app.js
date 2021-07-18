@@ -71,6 +71,7 @@ Vue.createApp(App).mount('#app')
 */
 
 // Lesson #4 - Data Properties and Methods [ 👀 ]
+/*
 const App = {
     data: () => ({
         counter: 0,
@@ -84,6 +85,45 @@ const App = {
         },
         getDate() {
             return new Date();
+        }
+    }
+}
+
+Vue.createApp(App).mount('#app')
+*/
+
+// Lesson #5 - Computed Properties and Watchers [ 👁 ]
+const App = {
+    data: () => ({
+        fullname: "",
+        name: "",
+        surname: "",
+        counter: 0,
+        counter2: 0
+    }),
+    methods: {
+        getCounter() {
+            console.log('from method')
+            return this.counter
+        }
+    },
+    computed: {
+        getFullName() {
+            return this.name + " " + this.surname
+        },
+        getCounter2() {
+            console.log('from computed')
+            return this.counter2
+        }
+    },
+    watch: {
+        name(newVal, oldVal) {
+            console.log(oldVal)
+            this.fullname = newVal + " " + this.surname
+        },
+        surname(newVal, oldVal) {
+            console.log(oldVal)
+            this.fullname = this.name + " " + newVal
         }
     }
 }
