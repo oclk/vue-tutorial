@@ -131,6 +131,7 @@
 -->
 
 <!-- Lesson #10 - Form Input Bindings [ ✍️ ] -->
+<!--
 <div id="app">
     <form>
         <input v-model="text" type="text" placeholder="type text">
@@ -165,6 +166,18 @@
             {{ select }}
         </div>
     </form>
+</div>
+-->
+
+<!-- Lesson #11 - Components Basics [ 👻 ] -->
+<div id="app">
+    <inc-btn></inc-btn>
+    <inc-btn></inc-btn>
+    <hr>
+    <component :is="selectedComponent"></component>
+    <br>
+    <button @click="selectedComponent = 'inc-btn'">Change to Inc</button>
+    <button @click="selectedComponent = 'dec-btn'">Change to Dec</button>
 </div>
 
 <script src="app.js"></script>

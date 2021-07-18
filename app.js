@@ -226,6 +226,7 @@ Vue.createApp(App).mount('#app')
 */
 
 // Lesson #10 - Form Input Bindings [ ✍️ ]
+/*
 // v-model
 // Text
 // Multiline text
@@ -244,3 +245,37 @@ const App = {
 }
 
 Vue.createApp(App).mount('#app')
+*/
+
+// Lesson #11 - Components Basics [ 👻 ]
+// Base Example
+// Reusing Components
+// Dynamic Components
+const App = {
+    data: () => ({
+        selectedComponent: 'inc-btn',
+    }),
+}
+
+const IncBtn = {
+    data: () => ({
+        counter: 0,
+    }),
+    template: `
+    <button @click="counter++">Counter is {{ counter }} </button>
+    `
+}
+
+const DecBtn = {
+    data: () => ({
+        counter: 0,
+    }),
+    template: `
+    <button @click="counter--">Counter is {{ counter }} </button>
+    `
+}
+
+Vue.createApp(App)
+    .component('IncBtn', IncBtn)
+    .component('DecBtn', DecBtn)
+    .mount('#app')
