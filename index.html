@@ -62,6 +62,7 @@
 -->
 
 <!-- Lesson #6 - Class and Style Bindings [ 🎨 ] -->
+<!--
 <div id="app">
     <div :class="{success: isSuccess, danger: isDanger}">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quidem inventore, quam, aut aspernatur dolor corporis autem deleniti neque aliquam, facilis expedita reprehenderit ratione cupiditate quisquam consectetur blanditiis eius! At?</p>
@@ -84,6 +85,15 @@
     <div :style="[styleColor, styleBorder]">
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem amet eaque officiis, cupiditate doloremque, magni eligendi numquam quaerat illo ex, debitis eum eos accusantium sed. Saepe illum culpa nobis eos!</p>
     </div>
+</div>
+-->
+
+<!-- Lesson #7 - Conditional Rendering [ 🤷‍♂️ ] -->
+<div id="app">
+    <h1 v-if="type == 'FIRST'">From FIRST</h1>
+    <h1 v-else-if="type == 'SECOND'">From SECOND</h1>
+    <h1 v-else>From ELSE</h1>
+    <h3 v-show="type == 'SECOND'">From SECOND (v-show)</h3>
 </div>
 
 <script src="app.js"></script>

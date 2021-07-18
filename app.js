@@ -135,6 +135,7 @@ Vue.createApp(App).mount('#app')
 // Lesson #6 - Computed Properties and Watchers [ 🎨 ]
 // Binding HTML Classes (Object Syntax | Array Syntax)
 // Binding Inline Styles (Object Syntax | Array Syntax | Multiple Values)
+/*
 const App = {
     data: () => ({
         isDanger: true,
@@ -151,6 +152,19 @@ const App = {
         },
         styleColor: 'color: green; fontSize: 24px',
         styleBorder: 'border: 1px solid grey; border-radius: 10px' 
+    })
+}
+
+Vue.createApp(App).mount('#app')
+*/
+
+// Lesson #7 - Conditional Rendering [ 🤷‍♂️ ]
+// v-if (v-else | v-else-if)
+// v-show
+// v-if vs v-show
+const App = {
+    data: () => ({
+        type: 'FIRST'
     })
 }
 
