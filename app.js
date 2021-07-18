@@ -176,6 +176,7 @@ Vue.createApp(App).mount('#app')
 // v-for with a Range
 // Displaying Filtered/Sorted Results
 // v-for with an Object
+/*
 const App = {
     data: () => ({
         numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9],
@@ -188,6 +189,34 @@ const App = {
     computed: {
         evenNumbers() {
             return this.numbers.filter(number => number % 2 === 0)
+        }
+    }
+}
+
+Vue.createApp(App).mount('#app')
+*/
+
+// Lesson #9 - Event Handling [ 🔥 ]
+// Multiple Event Handlers
+// Event Modifiers (.stop | .prevent | .capture | .once ...)
+// Key Modifiers (.enter | .tab | .esc ...)
+// System Modifier Keys (.ctrl | .alt | .shift ...)
+const App = {
+    methods: {
+        one() {
+            console.log('from one')
+        },
+        two() {
+            console.log('from two')
+        },
+        submit() {
+            console.log('from submit')
+        },
+        enter(e) {
+            console.log(e.target.value)
+        },
+        ctrlEnter(e) {
+            console.log(e.target.value)
         }
     }
 }
