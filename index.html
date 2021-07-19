@@ -1,183 +1,67 @@
-<script src="https://unpkg.com/vue@next"></script>
-<link rel="stylesheet" href="style.css">
+<!doctype html>
+<html lang="en">
 
-<!-- Lesson #1 - Introduction [ 🚀 ] -->
-<!--
-<div id="app">
-    {{ message }}
-</div>
--->
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>My Todo App</title>
+</head>
 
-<!-- Lesson #2 - Application & Component Instances [ 🐣 ] -->
-<!--
-<div id="app">
-    Counter: {{ counter }}
-    <hr>
-    <button @click="counter++">Increment</button>
-</div>
--->
+<body>
+  <!-- Vue.js package -->
+  <script src="https://unpkg.com/vue@next"></script>
 
-<!-- Lesson #3 - Template Syntax [ 🤖 ] -->
-<!--
-<div id="app">
-    Message: {{ message }}
-    <div v-html="rowHtml"></div>
-    <div v-bind:[dynamicArg]="id"></div>
-    <hr>
-    {{ index + 1 }}
-    <hr>
-    {{ color == 'RED' ? 'Color is red' : 'Color is not red' }}
-    <hr>
-    {{ message.split(' ')[0] }}
-</div>
--->
-
-<!-- Lesson #4 - Data Properties and Methods [ 👀 ] -->
-<!--
-<div id="app">
-    Counter: {{ counter }}
-    <hr>
-    <button @click="inc">Inc</button>
-    <button @click="dec">Dec</button>
-    <hr>
-    Date: {{ getDate() }}
-</div>
--->
-
-<!-- Lesson #5 - Computed Properties and Watchers [ 👁 ] -->
-<!--
-<div id="app">
-    <input type="text" placeholder="name" v-model="name">
-    <input type="text" placeholder="surname" v-model="surname">
-    <hr>
-    Fullname from computed: {{ getFullName }}
-    <hr>
-    Fullname from watch: {{ fullname }}
-    <hr>
-    <button @click="counter++">Change counter</button>
-    <button @click="counter2++">Change counter2</button>
-    <hr>
-    Counter: {{ getCounter() }} - Counter 2: {{ getCounter2 }}
-</div>
--->
-
-<!-- Lesson #6 - Class and Style Bindings [ 🎨 ] -->
-<!--
-<div id="app">
-    <div :class="{success: isSuccess, danger: isDanger}">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quidem inventore, quam, aut aspernatur dolor corporis autem deleniti neque aliquam, facilis expedita reprehenderit ratione cupiditate quisquam consectetur blanditiis eius! At?</p>
-    </div>
-    <div :class="classSyntax">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt animi saepe exercitationem atque quidem vero eveniet itaque pariatur! Perspiciatis rem eius nostrum obcaecati placeat alias. Maiores voluptas atque incidunt praesentium!</p>
-    </div>
-    <div :class="[border, danger]">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ad esse eveniet, numquam voluptatem unde recusandae rem, non cumque porro laudantium quam, molestias voluptatum molestiae? Aliquid ad doloremque eligendi suscipit!</p>
-    </div>
-    <div :class="[border, isDanger ? danger : '']">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ad esse eveniet, numquam voluptatem unde recusandae rem, non cumque porro laudantium quam, molestias voluptatum molestiae? Aliquid ad doloremque eligendi suscipit!</p>
-    </div>
-    <div :style="{color: 'blue', fontSize: 30 + 'px'}">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem amet eaque officiis, cupiditate doloremque, magni eligendi numquam quaerat illo ex, debitis eum eos accusantium sed. Saepe illum culpa nobis eos!</p>
-    </div>
-    <div :style="styleSyntax">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem amet eaque officiis, cupiditate doloremque, magni eligendi numquam quaerat illo ex, debitis eum eos accusantium sed. Saepe illum culpa nobis eos!</p>
-    </div>
-    <div :style="[styleColor, styleBorder]">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem amet eaque officiis, cupiditate doloremque, magni eligendi numquam quaerat illo ex, debitis eum eos accusantium sed. Saepe illum culpa nobis eos!</p>
-    </div>
-</div>
--->
-
-<!-- Lesson #7 - Conditional Rendering [ 🤷‍♂️ ] -->
-<!--
-<div id="app">
-    <h1 v-if="type == 'FIRST'">From FIRST</h1>
-    <h1 v-else-if="type == 'SECOND'">From SECOND</h1>
-    <h1 v-else>From ELSE</h1>
-    <h3 v-show="type == 'SECOND'">From SECOND (v-show)</h3>
-</div>
--->
-
-<!-- Lesson #8 - List Rendering [ 👋🏻 ] -->
-<!--
-<div id="app">
-    <div v-for="i in 10" :key="i">
-        {{ i }}
-    </div>
-    <hr>
-    <div v-for="i in evenNumbers" :key="i">
-        {{ i }}
-    </div>
-    <div>
-        <ul>
-            <li v-for="(user, i) in users" :key="i">
-                Name: {{ user.name }} - Surname: {{ user.surname }}
-            </li>
-        </ul>
-    </div>
-</div>
--->
-
-<!-- Lesson #9 - Event Handling [ 🔥 ] -->
-<!--
-<div id="app">
-    <button @click="one(), two()">Multiple Event</button>
-    <form action="">
-        <button type="submit" @click.prevent="submit">Submit</button>
-    </form>
-    <input type="text" @keyup.enter="enter" placeholder="Enter value">
-    <input type="text" @keyup.ctrl.enter="ctrlEnter" placeholder="Enter value 2">
-</div>
--->
-
-<!-- Lesson #10 - Form Input Bindings [ ✍️ ] -->
-<!--
-<div id="app">
-    <form>
-        <input v-model="text" type="text" placeholder="type text">
-        {{ text }}
-        <hr>
-        <textarea v-model="textarea" rows="3"></textarea>
-        {{ textarea }}
-        <div>
-            <h3>Checkbox Operations</h3>
-            <input v-model="checkbox" type="checkbox">
-            {{ checkbox }}
-            <br>
-            <input v-model="checkboxes" type="checkbox" name="TUR" value="TUR">
-            <input v-model="checkboxes" type="checkbox" name="USA" value="USA">
-            <input v-model="checkboxes" type="checkbox" name="GER" value="GER">
-            {{ checkboxes }}
+  <div id="app">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <!-- Input(s) Group -->
+        <!-- Title ( Text ) -->
+        <div class="input-group my-4">
+          <span class="input-group-text">Title</span>
+          <input v-model="title" type="text" class="form-control" placeholder="type title">
         </div>
-        <div>
-            <h3>Radio button Operations</h3>
-            <input v-model="radio" type="radio" value="MALE">
-            <input v-model="radio" type="radio" value="FEMALE">
-            {{ radio }}
+        <!-- Description ( Textarea ) -->
+        <div class="input-group mb-4">
+          <span class="input-group-text">Description</span>
+          <textarea v-model="description" class="form-control"></textarea>
         </div>
-        <div>
-            <h3>Select Operations</h3>
-            <select v-model="select">
-                <option value="tr">TUR</option>
-                <option value="usa">USA</option>
-                <option value="ger">GER</option>
-                <option value="fr">FR</option>
-            </select>
-            {{ select }}
+        <!-- Severity ( Select ) -->
+        <select v-model="severity" class="form-select mb-4">
+          <option>High</option>
+          <option>Medium</option>
+          <option>Low</option>
+        </select>
+        <!-- Add ( Button ) -->
+        <div class="d-grid gap-2 col-6">
+          <button @click="add" class="btn btn-secondary" type="button">Add</button>
         </div>
-    </form>
-</div>
--->
+        <hr class="my-5">
+        <!-- Todo List -->
+        <h4 class="mb-4">Todo List</h4>
+        <!-- Todo Card -->
+        <div class="card mb-4" v-for="(todo, i) in todos" :key="i">
+          <div class="card-header">
+            <span class="badge" :class="[getClass(todo.severity)]">
+              {{ todo.severity }}
+            </span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ todo.title }}</h5>
+            <p class="card-text">{{ todo.description }}</p>
+            <a @click="del(i)" class="btn btn-primary">Delete Item</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<!-- Lesson #11 - Components Basics [ 👻 ] -->
-<div id="app">
-    <inc-btn></inc-btn>
-    <inc-btn></inc-btn>
-    <hr>
-    <component :is="selectedComponent"></component>
-    <br>
-    <button @click="selectedComponent = 'inc-btn'">Change to Inc</button>
-    <button @click="selectedComponent = 'dec-btn'">Change to Dec</button>
-</div>
+  <!-- App JavaScript file -->
+  <script src="app.js"></script>
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
 
-<script src="app.js"></script>
+</html>
